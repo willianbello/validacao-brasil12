@@ -399,7 +399,6 @@ function dataInvalida(data: string): boolean {
         ano = data.substring(4);
 
         let testeData = new Date(`${mes}/${dia}/${ano}`);
-        console.log(testeData);
 
         return Number.isNaN(testeData.getTime());
     } else {
@@ -427,16 +426,11 @@ function validaDataMin(data: string, min: string | undefined): boolean {
 
         let testeData = new Date(`${mes}/${dia}/${ano}`);
         let testeDataMin = new Date(`${mesMin}/${diaMin}/${anoMin}`);
-        console.log('min: ', `${mesMin}/${diaMin}/${anoMin}`);
 
         if (!Number.isNaN(testeData.getTime())) {
             if (Number.isNaN(testeDataMin.getTime())) {
                 throw new Error('Data Mínima no Validator é inválida');
             } else {
-                console.log('data: ', testeData);
-                console.log('min: ', testeDataMin);
-                console.log('data menor que min: ', testeData < testeDataMin);
-
                 return testeData < testeDataMin;
             }
         }

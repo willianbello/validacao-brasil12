@@ -38,9 +38,7 @@ import { TituloEleitorDirective } from './diretivas/titulo-eleitor/titulo-eleito
     DataDirective,
     TituloEleitorDirective,
   ],
-  imports: [
-    CommonModule,
-  ],
+  imports: [],
   exports:[
     CpfDirective,
     CnpjDirective,
